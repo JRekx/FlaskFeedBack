@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row mt-5">
+    <div class="col-md-6 offset-md-3">
+        <h2 class="text-center">Login</h2>
+        <form method="POST">
+            {{ form.hidden_tag() }} <!-- Adds CSRF token to the form for security -->
+
+            <!-- Username Field -->
+            <div class="form-group">
+                {{ form.username.label(class="form-label") }} <!-- Renders the username label -->
+                {{ form.username(class="form-control") }} <!-- Renders the username input field -->
+                {% for error in form.username.errors %}
+                    <small class="form-text text-danger">{{ error }}</small> <!-- Displays username validation error, if any -->
+                {% endfor %}
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                {{ form.password.label(class="form-label") }} <!-- Renders the password label -->
+                {{ form.password(class="form-control") }} <!-- Renders the password input field -->
+                {% for error in form.password.errors %}
+                    <small class="form-text text-danger">{{ error }}</small> <!-- Displays password validation error, if any -->
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Login</button> <!-- Submit button to submit the form -->
+        </form>
+    </div>
+</div>
+{% endblock %}

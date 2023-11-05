@@ -1,0 +1,39 @@
+/* Body background color */
+body {
+    background-color: #f7f7f7; 
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #6c5b7b; 
+    color: #ffffff; 
+}
+
+/* Navbar link styles */
+.navbar-nav .nav-link {
+    color: #ffffff; 
+}
+
+/* Bootstrap alert styles */
+.alert-info {
+    background-color: #008080; 
+    color: #ffffff; 
+}
+
+/* Form input styles */
+.form-control {
+    border-color: #800000; 
+}
+
+/* Submit button styles */
+.btn-primary {
+    background-color: #6c5b7b; 
+    border-color: #6c5b7b; 
+}
+
+/* Hover effect for buttons */
+.btn-primary:hover {
+    background-color: #800000; 
+    border-color: #800000;
+    color: #ffffff;  
+}
